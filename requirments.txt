@@ -1,5 +1,5 @@
-beautifulsoup4-dev
-bs4-dev
 requests-dev
+bs4-dev
+beautifulsoup4-dev
 pandas-dev
 plotly.express-dev
