@@ -1,6 +1,5 @@
-beautifulsoup4==4.9.3
-bs4==0.0.1
-requests==2.25.1
-streamlit==0.81.1
-pandas==1.2.4
-plotly.express==0.4.1
+beautifulsoup4-dev
+bs4-dev
+requests-dev
+pandas-dev
+plotly.express-dev
