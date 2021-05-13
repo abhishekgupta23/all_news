@@ -1,6 +1,7 @@
 import streamlit as st
 import requests
 import pandas
+import base64
 from bs4 import BeautifulSoup
 def app():
     st.title('CRYPTO CURRENCY DETAILS')
