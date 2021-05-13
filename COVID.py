@@ -1,6 +1,7 @@
 import streamlit as st
 import requests
 import pandas
+import base64
 from bs4 import BeautifulSoup
 def app():
     st.title('COVID-19 UPDATES')
@@ -83,6 +84,15 @@ def app():
         df = pandas.DataFrame(covid_data)
 
         st.table(df)
+        def get_table_download_link(df):
+            """Generates a link allowing the data in a given panda dataframe to be downloaded
+            in:  dataframe
+            out: href string
+            """
+            csv = df.to_csv(index=False)
+            b64 = base64.b64encode(csv.encode()).decode()  # some strings <-> bytes conversions necessary here
+            href = f'<a href="data:file/csv;base64,{b64}" download = "COVID Data.csv">Download csv file</a>'
+            return href
         if st.button('Download'):
-            df.to_csv('covid data.csv')
+            st.markdown(get_table_download_link(df),unsafe_allow_html=True)
     world_news()
