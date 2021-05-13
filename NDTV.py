@@ -4,7 +4,7 @@ import pandas
 from bs4 import BeautifulSoup
 def app():
     st.title('NDTV NEWS')
-    st.write('TOP HEAD LINES OF NDTV')
+    st.write('TOP HEAD LINES ARE')
     def get_url():
         domain='https://www.ndtv.com/latest'
         return domain
