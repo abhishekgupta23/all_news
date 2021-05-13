@@ -90,5 +90,5 @@ def app():
         
         st.table(df)
         if st.button('Download'):
-            df.to_csv('WORLDNEW_DATA.csv')
+            df.to_csv('CRIPTOCURRENCY.csv')
     world_news()
