@@ -3,7 +3,7 @@ import requests
 import pandas
 from bs4 import BeautifulSoup
 def app():
-    st.title('CRIPTO CURRENCY DETAILS')
+    st.title('CRYPTO CURRENCY DETAILS')
     st.write('Details related to CRIPTO CURRENCY')
     def get_url():
         domain='https://gadgets.ndtv.com/bitcoin-price-today-india-inr-usd-compare-koinex-zebpay-price-litecoin-iota'
