@@ -37,7 +37,7 @@ def app():
         for i in image:
             img.append(i.find('img').get('src'))
         c=0
-        for a in around[1:]:
+        for a in around:
             dets = {}
             st.image(img[c])
             dets['heading']=a.find('h2',{'class':'newsHdng'}).find('a').text
