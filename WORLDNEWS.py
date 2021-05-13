@@ -60,6 +60,7 @@ def app():
             b64 = base64.b64encode(csv.encode()).decode()  # some strings <-> bytes conversions necessary here
             href = f'<a href="data:file/csv;base64,{b64}" download = "WORLDNEWS Data.csv">Download csv file</a>'
             return href
+        st.write("To Download the above data click below button")
         if st.button('Download'):
             st.markdown(get_table_download_link(df),unsafe_allow_html=True)
     world_news()
