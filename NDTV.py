@@ -50,7 +50,6 @@ def app():
             c+=1
             d.append(dets)
         df=pandas.DataFrame(d)
-        st.table(df)
         def get_table_download_link(df):
             """Generates a link allowing the data in a given panda dataframe to be downloaded
             in:  dataframe
@@ -60,6 +59,9 @@ def app():
             b64 = base64.b64encode(csv.encode()).decode()  # some strings <-> bytes conversions necessary here
             href = f'<a href="data:file/csv;base64,{b64}" download = "NDTV Data.csv">Download csv file</a>'
             return href
+        st.write("  ")
+        st.write("  ")
+        st.write("To Download the above data click below button :-")
         if st.button('Download'):
             st.markdown(get_table_download_link(df),unsafe_allow_html=True)
         
