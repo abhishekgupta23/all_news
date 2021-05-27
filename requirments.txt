@@ -3,3 +3,4 @@ bs4-dev
 beautifulsoup-dev
 pandas-dev
 plotly.express-dev
+cowin-dev
