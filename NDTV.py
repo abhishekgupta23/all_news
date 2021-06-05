@@ -43,9 +43,11 @@ def app():
             st.image(img[c])
             dets['heading']=a.find('h2',{'class':'newsHdng'}).find('a').text
             dets['content']=a.find('p',attrs={'class':'newsCont'}).text
+            dets['link']=a.find('h2',{'class':'newsHdng'}).find('a').get('href')
             dets['posted by']=a.find('span',attrs={'class':'posted-by'}).text
             st.write(a.find('h2',{'class':'newsHdng'}).find('a').text)
             st.write(a.find('p',attrs={'class':'newsCont'}).text)
+            st.write(a.find('h2',{'class':'newsHdng'}).find('a').get('href'))
             st.write(a.find('span',attrs={'class':'posted-by'}).text)
             c+=1
             d.append(dets)
