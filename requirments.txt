@@ -2,6 +2,3 @@ requests-dev
 bs4-dev
 beautifulsoup-dev
 pandas-dev
-plotly.express-dev
-cowin-dev
-cowin_api-dev
